@@ -1,0 +1,25 @@
+.footer{
+    overflow: hidden;
+    padding-top: 3rem;
+    min-height: 20rem;
+    background-color: var(--rq-secondary-color);
+    width: 100%;
+
+    h3{
+        color: var(--rq-bg-color);
+        margin-top: .3rem;
+        margin-bottom: .3rem;
+    }
+
+    a{
+        color: var(--rq-footer-color);
+    }
+    hr{
+        border: 1px solid  hsla(0, 0%, 100%, 0.2);
+    }
+    .footer-text{
+        font-weight: 400;
+        font-size: 18px;
+        color: var(--rq-acent-color);
+    }
+}

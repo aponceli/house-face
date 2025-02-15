@@ -1,0 +1,60 @@
+<div class="rq-section">
+    <div class="rq-section-title" >
+        {{selectedService?.title}}
+    </div>
+    <div class="rq-section-body">
+        <div class="grid">
+            <div class="col">
+                <div class="flex justify-content-center">
+                    <img width="450" src="{{selectedService?.imageUrl}}" class="border-round-md" alt="{{selectedService?.title}}">
+                </div>
+            </div>
+            <div class="col">
+                <div class="flex justify-content-center">
+                    <div>
+                        <p class="rq-section-text">
+                            {{selectedService?.description}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="selectedService != null && selectedService.sections.length > 0">
+    <div class="rq-section" *ngFor="let section of selectedService.sections">
+        <div class="rq-section-subtitle" >
+            {{section.title}}
+        </div>
+        <div class="rq-section-body">
+            <div class="grid justify-content-center">
+                <div class="sm:col-6 md:col-3 lg:col-3" *ngFor="let sb of section.content">
+                    <p-card [style]="{  overflow: 'hidden',
+                                        height: '15rem',
+                                        border:'solid 1px #e5e7eb'}"
+                            styleClass="cursor-pointer shadow-none">
+                        <ng-template #header>
+                            <div class="p-2 pt-3 rq-card-icon flex justify-content-center">
+                                <i class="pi pi-bolt"></i>
+                            </div>
+                        </ng-template>
+                        <ng-template #title>
+                            <div class="flex justify-content-center">
+                                <span>{{sb.title}}</span>
+                            </div>
+                        </ng-template>
+                        <ng-template #content>
+                            <div class="flex justify-content-center ">
+                                <p class="rq-text-content">
+                                    {{sb.content}}
+                                </p>
+                            </div>
+                        </ng-template>
+                    </p-card>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

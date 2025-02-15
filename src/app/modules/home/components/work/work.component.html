@@ -1,0 +1,27 @@
+
+<div class="rq-section">
+    <div class="rq-section-title" >
+        Our Work
+    </div>
+    <div class="rq-section-body mb-4">
+        <p-carousel [value]="gallery"
+                    [numVisible]="1"
+                    [numScroll]="1"
+                    [circular]="true"
+                    autoplayInterval="5000"
+                    orientation="horizontal"
+                    verticalViewPortHeight="330px"
+                    contentClass="flex items-center">
+            <ng-template let-image #item>
+                <div class="border border-surface-200 dark:border-surface-700 rounded m-2 p-4">
+                    <div class="flex justify-content-center">
+                        <div class="relative mx-auto">
+                            <p-image src="{{image.url}}" height="450" [alt]="image.title" class="w-full rounded" />
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </p-carousel>
+
+    </div>
+</div>

@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+
+html,body{
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--rq-bg-color);
+}
+
+*{
+  font-family: Helvetica;
+}
+
+:root{
+    --rq-bg-color:#FAFFFD;
+    --rq-primary-color: #10b981;
+    --rq-acent-color:#FAFFFD;
+    --rq-secondary-color:#0B3C49;
+    --rq-footer-color:#e7e7e7;
+}

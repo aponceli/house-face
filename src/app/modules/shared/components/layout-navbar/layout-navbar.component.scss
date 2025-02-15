@@ -1,0 +1,98 @@
+
+.rq-layout-topbar{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1100;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .7);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid  hsla(0, 0%, 44%, 0.2);
+
+
+    .rq-layout-topbar-inner{
+        display: flex;
+        justify-content: space-between;
+        height: 72px;
+        width: 100%;
+        padding: 0px 20%;
+        .rq-layout-topbar-logo{
+            width: 250px;
+        }
+        .rq-topbar-items{
+            display: flex;
+            list-style-type: none;
+            padding: 0px 50px;
+            align-items: center;
+            gap: .5rem;
+            height: 72px;
+            margin: 0px;
+            li{
+                .topbar-item{
+                    display: inline-flex;
+                    align-items: center;
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 20px;
+                    color: black;
+                    padding-right: 1rem;
+                    &:hover{
+                        transition: .3s;
+                        color: var(--rq-primary-color);
+                    }
+                }
+            }
+        }
+        .rq-topbar-menu{
+          display: none;
+        }
+    }
+}
+
+
+@media (max-width: 1250px){
+  .rq-layout-topbar{
+    .rq-layout-topbar-inner{
+      padding: 0px 5%;
+      .rq-layout-topbar-logo{
+        width: 150px;
+      }
+      .rq-topbar-items{
+        display: flex;
+        list-style-type: none;
+        padding: 0px 25px;
+        align-items: center;
+        li{
+            .topbar-item{
+                padding-right: .5rem;
+            }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 720px){
+  .rq-layout-topbar{
+    .rq-layout-topbar-inner{
+      padding: 0px 0px;
+      .rq-topbar-items{
+        display: none;
+      }
+      .rq-layout-topbar-logo{
+        display: flex;
+        justify-content: center;
+        width: calc(100% - 60px);
+      }
+      .rq-topbar-menu{
+        display: flex;
+        width: 60px;
+        height: 60px;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+

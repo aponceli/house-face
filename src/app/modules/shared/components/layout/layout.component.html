@@ -1,0 +1,38 @@
+<app-layout-navbar  (menuEmitter)="opeMenu()"></app-layout-navbar>
+<div class="rq-layout-body">
+    <router-outlet></router-outlet>
+    <p-drawer #drawerRef
+            [(visible)]="showMenu"
+            [style]="{'background-color': '#FFF'}"
+            header="HouseFace"
+            position="right">
+            <ul class="list-none p-0 m-0 overflow-hidden">
+                <li>
+                    <a href="/app/home" pRipple class="rq-ripple-link p-ripple flex items-center cursor-pointer p-3 border-round-sm  duration-150 transition-colors">
+                        <i class="pi pi-home mr-2"></i>
+                        <span class="font-medium">Home</span>
+                    </a>
+                    <a href="/app/services" pRipple class="rq-ripple-link p-ripple flex items-center cursor-pointer p-3 border-round-sm  duration-150 transition-colors">
+                        <i class="pi pi-cog mr-2"></i>
+                        <span class="font-medium">Services</span>
+                    </a>
+                    <a href="/app/our-work" pRipple class="rq-ripple-link p-ripple flex items-center cursor-pointer p-3 border-round-sm  duration-150 transition-colors">
+                        <i class="pi pi-folder-open mr-2"></i>
+                        <span class="font-medium">My work</span>
+                    </a>
+                    <a pRipple href="/app/about-us" class="rq-ripple-link p-ripple flex items-center cursor-pointer p-3 border-round-sm  duration-150 transition-colors">
+                        <i class="pi pi-map-marker mr-2"></i>
+                        <span class="font-medium">About us</span>
+                    </a>
+                </li>
+            </ul>
+
+    </p-drawer>
+</div>
+<div class="fix-link">
+    <a href="https://api.whatsapp.com/send/?phone=16262340571&text=Message+us+&type=phone_number&app_absent=0" target="_blank">
+        <img src="icons/whatsapp_icon.png" width="56" alt="">
+    </a>
+
+</div>
+<app-footer></app-footer>

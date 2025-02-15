@@ -1,0 +1,7 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/acd35d5b-cffe-4189-8d3c-5db88a61e0d9/resourceGroups/roque-frontend-dev-rg/providers/Microsoft.Web/sites/roque-frontend-dev",
+}

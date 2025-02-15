@@ -1,0 +1,36 @@
+<div class="rq-layout-topbar">
+  <div class="rq-layout-topbar-inner">
+      <div class="rq-layout-topbar-logo">
+          <img src="images/logo.png" alt="logo" height="72">
+      </div>
+      <ul class="rq-topbar-items">
+          <li>
+              <a href="/app/home"  class="topbar-item">
+                  Home
+              </a>
+          </li>
+          <li>
+              <a href="/app/services" class="topbar-item">
+                  Services
+              </a>
+          </li>
+          <li>
+              <a href="/app/our-work"  class="topbar-item">
+                  My work
+              </a>
+          </li>
+          <li>
+              <a href="/app/about-us" class="topbar-item">
+                 About us
+              </a>
+          </li>
+      </ul>
+      <div class="rq-topbar-menu">
+        <p-button   icon="pi pi-bars"
+                    [rounded]="true"
+                    (onClick)="openMenu()"
+                    [text]="true"
+                    severity="primary" />
+      </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<div class="rq-landscape-container">
+    <h1 style="color: white;">Price lorem ipsum</h1>
+    <br>
+    <p style="color: white;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, magni?</p>
+    <button class="rq-button-outline">Estimate</button>
+</div>
+<div class="rq-section">
+    <div class="rq-section-title" >
+        Our Services
+    </div>
+    <div class="rq-section-body">
+        <div class="grid flex justify-content-center">
+
+            <div class="sm:col-12 md:col-6 lg:col-4" *ngFor="let service of providedServiceList">
+                <p-card [style]="{ overflow: 'hidden'}" styleClass="m-3 hover:shadow-4 cursor-pointer">
+                    <ng-template #header>
+                        <img alt="Card" height="200" class="w-full" src="{{service.imageUrl}}" />
+                    </ng-template>
+                    <ng-template #title> {{service.title}} </ng-template>
+                    <ng-template #footer>
+                        <div class="flex gap-4 mt-1">
+                            <a [routerLink]="['/app/services']" [queryParams]="{serviceId:service.id}" class="p-button font-bold w-full">
+                                Read more
+                            </a>
+                        </div>
+                    </ng-template>
+                </p-card>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="rq-section">
+    <div class="rq-section-title" >
+        Our Work
+    </div>
+    <div class="rq-section-body">
+        <p-carousel [value]="gallery"
+                    [numVisible]="1"
+                    [numScroll]="1"
+                    [circular]="true"
+                    autoplayInterval="5000"
+                    orientation="horizontal"
+                    verticalViewPortHeight="330px"
+                    contentClass="flex items-center">
+            <ng-template let-image #item>
+                <div class="border border-surface-200 dark:border-surface-700 rounded m-2 p-4">
+                    <div class="flex justify-content-center">
+                        <div class="relative mx-auto">
+                            <p-image src="{{image.url}}" height="450" [alt]="image.title" class="w-full rounded" />
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </p-carousel>
+
+    </div>
+</div>
